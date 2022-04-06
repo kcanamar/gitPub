@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-    <title>Drink</title>
+    <title>Food</title>
 </head>
 <body>
-    <h1>At foo bar</h1>
-    <h2><%= drink.name %></h2>
-    <img src="<%= drink.image %>" alt="">
-    <h1><%= drink.price %></h1>
-   <a href="/drinks">Go Back</a>
+    <h1>Our Food</h1>
+    <ul>
+        <% for (let food in allFood) { %>
+    
+            <li>
+               <a href="/foods/<%=food%>"><h2><%= allFood[food].name %></h2></a>
+            </li>
+    
+        <% } %>
+    </ul>
 </body>
 </html>
