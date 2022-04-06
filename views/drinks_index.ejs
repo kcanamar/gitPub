@@ -10,6 +10,15 @@
     <title>Drink</title>
 </head>
 <body>
-    <h1>Welcome to GitPub</h1>
+    <h1>Our Drinks</h1>
+    <ul>
+        <% for (let drink in allDrinks) { %>
+    
+            <li>
+               <a href="/drinks/<%=drink%>"><h2><%= allDrinks[drink].name %></h2></a>
+            </li>
+    
+        <% } %>
+    </ul>
 </body>
 </html>
