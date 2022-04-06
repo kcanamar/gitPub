@@ -5,6 +5,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3001
+const drinks = require('./models/drinks.js')
 
 //////////////////////
 // Declare Middleware
@@ -15,6 +16,9 @@ const PORT = process.env.PORT || 3001
 ///////////////////////
 app.get("/", (req, res) => {
     res.send('Welcome to the Gitpub App!')
+})
+app.get("/drinks", (req, res) => {
+    res.render('drinks_index.ejs')
 })
 ///////////////////////////
 // Server Listener
